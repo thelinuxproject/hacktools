@@ -23,9 +23,7 @@ on_off = True
 #               MODULE               #
 #------------------------------------#
 import os
-#
-#------------------------------------#
-import os
+from time import sleep
 #
 #------------------------------------#
 
@@ -73,7 +71,9 @@ while on_off:
 				os.system("mkdir tools")
 				os.system("cd tools")
 				os.system("git clone https://github.com/thelinuxproject/instagram")
+				os.system("clear")
 				print("operation terminer...")
+				sleep(4)
 			elif userChoise_tools == "4":
 				userChoise = "0"
 			else :
