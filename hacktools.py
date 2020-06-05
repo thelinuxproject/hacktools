@@ -12,7 +12,7 @@
 
 """
 #------------------------------------#
-#				VARIABLE			 #
+#             VARIABLE               #
 #------------------------------------#
 username = "--"
 on_off = True
@@ -20,7 +20,7 @@ on_off = True
 #------------------------------------#
 
 #------------------------------------#
-#				MODULE				 #
+#               MODULE               #
 #------------------------------------#
 import os
 #
@@ -55,20 +55,20 @@ while on_off:
 	else:
 		os.system("clear")
 		print("[*]Choisir une option :\n\n[1]installation des outils \n[2] \n[3]Changer de nom \n[4]sortie")
-		userChoise = input(f"{username}>")
+		userChoise = input("{}>".format(username))
 
 		if userChoise == "1":
 			os.system("clear")
 			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2] \n[3] \n[4]sortie")
-			userChoise = input(f"{username}>")
+			userChoise = input("{}>".format(username))
 
-			if userChoise == "1":
+			if userChoise_tools == "1":
 				os.system("mkdir tools")
 				os.system("cd tools")
 				os.system("git clone https://github.com/thelinuxproject/instagram")
 				print("operation terminer")
-			elif userChoise == "4":
-				on_off = 0
+			elif userChoise_tools == "4":
+				userChoise = "0"
 			else :
 					printError()
 
