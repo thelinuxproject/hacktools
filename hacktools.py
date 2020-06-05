@@ -60,13 +60,13 @@ while on_off:
 		if userChoise == "1":
 			os.system("clear")
 			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2] \n[3] \n[4]sortie")
-			userChoise = input("{}>".format(username))
+			userChoise_tools = input("{}>".format(username))
 
 			if userChoise_tools == "1":
 				os.system("mkdir tools")
 				os.system("cd tools")
 				os.system("git clone https://github.com/thelinuxproject/instagram")
-				print("operation terminer")
+				print("operation terminer...")
 			elif userChoise_tools == "4":
 				userChoise = "0"
 			else :
