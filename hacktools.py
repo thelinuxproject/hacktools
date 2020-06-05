@@ -106,10 +106,10 @@ while on_off:
 				userChoise_site = str(userChoise_site)#									cast de la variable userChoise_site
 
 				if userChoise_site == "1":
-					os.system("bash instagram/instagram.sh")
+					os.system("bash tools/instagram/instagram.sh")
 					
 				elif userChoise_site == "2":
-					os.system("bash saycheesapp/saycheesapp.sh")
+					os.system("bash tools/saycheesapp/saycheesapp.sh")
 
 				elif userChoise_site == "3":
 					userChoise_ph = 0
