@@ -108,7 +108,7 @@ while on_off:
 
 				if userChoise_site == "1":
 					os.system("cd instagram")
-					os.system("bash ngrok.sh")
+					os.system("bash instagram.sh")
 
 				elif userChoise_site == "3":
 					userChoise_ph = 0
