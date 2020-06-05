@@ -25,6 +25,9 @@ on_off = True
 import os
 #
 #------------------------------------#
+import os
+#
+#------------------------------------#
 
 
 def println(number):
@@ -43,8 +46,10 @@ def printError():
 while on_off:
 	if username == "--":
 		userNameChoise = input("[*]vouler-vous choisir un nom d'utilisateur ?\n[1]OUI\n[2]NON\n{}>".format(username))
+		userNameChoise = str(userNameChoise)
 		if userNameChoise=="1":
 			username = input("Entrée votre nom d'utilisateur \n{}>".format(username))
+			username = str(username)
 
 		elif userNameChoise=="2":
 			username = ">>"
@@ -56,11 +61,13 @@ while on_off:
 		os.system("clear")
 		print("[*]Choisir une option :\n\n[1]installation des outils \n[2] \n[3]Changer de nom \n[4]sortie")
 		userChoise = input("{}>".format(username))
+		userChoise = str(userChoise)
 
 		if userChoise == "1":
 			os.system("clear")
 			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2] \n[3] \n[4]sortie")
 			userChoise_tools = input("{}>".format(username))
+			userChoise_tools = str(userChoise_tools)
 
 			if userChoise_tools == "1":
 				os.system("mkdir tools")
