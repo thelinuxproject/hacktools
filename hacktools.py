@@ -77,8 +77,8 @@ while on_off:
 
 			if userChoise_tools == "1":#												choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
-				os.system("git clone https://github.com/thelinuxproject/instagram tools")#	installation de instapump
-				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools")#	installation de saycheesapp 
+				os.system("git clone https://github.com/thelinuxproject/instagram tools/instagram")#	installation de instapump
+				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools/saycheesapp")#	installation de saycheesapp 
 				os.system("clear")
 				println(7)
 				print("operation terminer...")
