@@ -3,7 +3,7 @@
 """
 	Cette aplication fonctionne sur Linux MacOS(X) ...
 	Le code est en Python et non pas en bash(shell) pour l'executer vous devririés taper la commande suivante :
-	python <--Nom_du_Fichier-->
+	python3 hacktools
 
 	ATTANTION :
 		Le code ne fonctionne pas sous windows car les comamde du terminal ne son pas les même
@@ -63,7 +63,7 @@ while on_off:
 
 	else:
 		os.system("clear")
-		print("[*]Choisir une option :\n\n[1]installation des outils \n[2]utilisé un outils téléchargé \n[3]Changer de nom \n[4]sortie")
+		print("[*]Choisir une option :\n\n[1]installation des outils \n[2] \n[3]Changer de nom \n[4]sortie")
 		userChoise = input("{}>".format(username))
 		userChoise = str(userChoise)
 
@@ -94,32 +94,12 @@ while on_off:
 
 		elif userChoise == "2":
 			os.system("clear")
-			print("[*]Choisir une option :\n\n[1]utiliser les outils de phishing\n[2] \n[3] \n[4]sortie")
+			print("[*]Choisir une option :\n\n[1]\n[2] \n[3] \n[4]sortie")
 			userChoise_ph = input("{}>".format(username))
 			userChoise_ph = str(userChoise_ph)#											cast de la variable userChoise_ph
 
 
-			if userChoise_ph == "1":#													
-				os.system("clear")
-				print("[*]Choisir un site a copier :\n\n[1]instagram\n[2]saycheesapp(instagram) \n[3]retour \n[4]sortie")
-				userChoise_site = input("{}>".format(username))
-				userChoise_site = str(userChoise_site)#									cast de la variable userChoise_site
-
-				if userChoise_site == "1":
-					os.system("bash tools/instagram/instagram.sh")
-					
-				elif userChoise_site == "2":
-					os.system("bash tools/saycheesapp/saycheesapp.sh")
-
-				elif userChoise_site == "3":
-					userChoise_ph = 0
-
-				elif userChoise_site == "4":
-					serChoise = "0"#
-
-				else :
-					os.system("clear")#															netoyer le terminal
-					printError()
+			if userChoise_ph == "1":
 
 
 			elif userChoise_ph == "4":#													choix n°4 pour quitter le chois de l'outis
