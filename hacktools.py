@@ -71,19 +71,26 @@ while on_off:
 
 		if userChoise == "1":#															menu userchoice
 			os.system("clear")#															netoyage du terminal
-			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2] \n[3] \n[4]sortie")
+			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2]installé Saycheesapp \n[3] \n[4]sortie")
 			userChoise_tools = input("{}>".format(username))
 			userChoise_tools = str(userChoise_tools)#									cast des valeur sasi dans le but de limité les erreur
 
 			if userChoise_tools == "1":#												choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/instagram tools/instagram")#	installation de instapump
-				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools/saycheesapp")#	installation de saycheesapp 
+				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de paypal
 				os.system("clear")
 				println(7)
 				print("operation terminer...")
 				sleep(4)#																attente de 4seconde	
-
+			
+			elif userChoise_tools == "2":#												choix n°1 pour istaller les outils de phishing
+				os.system("mkdir tools")
+				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de saycheesapp 
+				os.system("clear")
+				println(7)
+				print("operation terminer...")
+				sleep(4)#
 			elif userChoise_tools == "4":#												choix n°4 pour quitter le choi de téléchargement des des depots
 				userChoise = "0"#														retour au menu userchoice
 
