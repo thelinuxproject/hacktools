@@ -58,23 +58,18 @@ while on_off:
 
 		else :
 			printError()
-
 #																						choix dune option entre instalation / utilisation / chager de nom / ou sortie de hacktools
 
 	else:
 		os.system("clear")
 		print("[*]Choisir une option :\n\n[1]installation des outils \n[2] \n[3]Changer de nom \n[4]sortie")
 		userChoise = input("{}>".format(username))
-		userChoise = str(userChoise)
-
-#																						choix d'une option instalation 
-
+		userChoise = str(userChoise)#																						choix d'une option instalation 
 		if userChoise == "1":#															menu userchoice
 			os.system("clear")#															netoyage du terminal
 			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2]installé Saycheesapp \n[3] \n[4]sortie")
 			userChoise_tools = input("{}>".format(username))
 			userChoise_tools = str(userChoise_tools)#									cast des valeur sasi dans le but de limité les erreur
-
 			if userChoise_tools == "1":#												choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/instagram tools/instagram")#	installation de instapump
@@ -83,7 +78,6 @@ while on_off:
 				println(7)
 				print("operation terminer...")
 				sleep(4)#																attente de 4seconde	
-			
 			elif userChoise_tools == "2":#												choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de saycheesapp 
@@ -93,8 +87,6 @@ while on_off:
 				sleep(4)#
 			elif userChoise_tools == "4":#												choix n°4 pour quitter le choi de téléchargement des des depots
 				userChoise = "0"#														retour au menu userchoice
-
-
 			else :
 					os.system("clear")
 					printError()
@@ -104,8 +96,6 @@ while on_off:
 			print("[*]Choisir une option :\n\n[1]\n[2] \n[3] \n[4]sortie")
 			userChoise_ph = input("{}>".format(username))
 			userChoise_ph = str(userChoise_ph)#											cast de la variable userChoise_ph
-
-
 			if userChoise_ph == "1":
 
 
@@ -115,16 +105,10 @@ while on_off:
 			else :
 				os.system("clear")#															netoyer le terminal
 				printError()
-
-
 		elif userChoise == "3":
 			username = "--"#															retour au menu changer de nom
-
-
 		elif userChoise == "4":
 			on_off = 0#																	sorti de hacktools
-
-
 		else :
 			os.system("clear")#															netoyer le terminal
 			printError()
