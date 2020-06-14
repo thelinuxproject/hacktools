@@ -73,8 +73,8 @@ while on_off:
 				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de paypal
 				os.system("clear")
 				println(7)
-				print("operation terminer...\n	Commandes pour utiliser instagram :\n •cd tools/insatgram\n•bash instagram.sh")
-				print("\n	Commandes pour utiliser paypal :\n •cd tools/paypal\n•bash paypal.sh")
+				print("operation terminer...\nCommandes pour utiliser instagram :\n •cd tools/insatgram\n•bash instagram.sh")
+				print("\nCommandes pour utiliser paypal :\n •cd tools/paypal\n•bash paypal.sh")
 				sleep(6)#														attente de 4seconde	
 			elif userChoise_tools == "2":#										choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
