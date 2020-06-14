@@ -86,7 +86,7 @@ while on_off:
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools/saycheesapp")#	installation de saycheesapp 
 				os.system("clear")
-				conte_a_rebour(3, "téléchargement en cour...","operation terminer")#attente de 4 seconde	
+				conte_a_rebour(3, "téléchargement en cour...", "operation terminer")#attente de 4 seconde	
 			elif user_choice_tools == "4":#										choix n°4 pour quitter le choi de téléchargement des des depots
 				user_choice = "0"#												retour au menu user_choise
 			else :
@@ -100,7 +100,7 @@ while on_off:
 			if user_option == "1":
 				os.system("setxkbmap fr")
 				os.system("clear")
-				conte_a_rebour(3, "changement en cour...","operation terminer")
+				conte_a_rebour(3, "changement en cour...", "operation terminer")
 			else :
 				conte_a_rebour(5, printError)
 
