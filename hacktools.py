@@ -95,7 +95,6 @@ while on_off:
 			userChoise_ph = str(userChoise_ph)#									cast de la variable userChoise_ph
 			if userChoise_ph == "1":
 
-
 			elif userChoise_ph == "4":#											choix n°4 pour quitter le chois de l'outis
 				userChoise = "0"#												retour au menu userchoice
 
