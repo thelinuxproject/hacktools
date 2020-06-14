@@ -34,7 +34,7 @@ def println(number):
 		k += 1
 
 
-def conte_a_rebour(nombre, text=""):
+def conte_a_rebour(nombre, text="", msgfinal=""):
 	os.system("clear")
 	while nombre > 0:
 		print(text)
@@ -42,6 +42,8 @@ def conte_a_rebour(nombre, text=""):
 		sleep(1)
 		nombre-=1
 		os.system("clear")
+	print("msgfinal")
+	sleep(1)
 #------------------------------------#
 
 
@@ -66,70 +68,78 @@ while on_off:
 #																				choix dune option entre instalation / utilisation / chager de nom / ou sortie de hacktools
 	else:
 		os.system("clear")
-		print("[*]Choisir une option :\n\n[1]installation des outils \n[2]Aide \n[3]Changer de nom \n[4]sortie")
-		userChoise = input("{}>".format(username))
-		userChoise = str(userChoise)#											choix d'une option instalation 
-		if userChoise == "1":#													menu userchoice
+		print("[*]Choisir une option :\n\n[1]installation des outils\n[2]Option & Réglage \n[3]Aide \n[4]Changer de nom \n[5]sortie")
+		user_choise = input("{}>".format(username))
+		user_choise = str(user_choise)#											choix d'une option instalation 
+		if user_choise == "1":#													menu user_choise
 			os.system("clear")#													netoyage du terminal
 			print("[*]Choisir une option :\n\n[1]installé les outils de phishing\n[2]installé Saycheesapp \n[3] \n[4]sortie")
-			userChoise_tools = input("{}>".format(username))
-			userChoise_tools = str(userChoise_tools)#							cast des valeur sasi dans le but de limité les erreur
-			if userChoise_tools == "1":#										choix n°1 pour istaller les outils de phishing
+			user_choise_tools = input("{}>".format(username))
+			user_choise_tools = str(user_choise_tools)#							cast des valeur sasi dans le but de limité les erreur
+			if user_choise_tools == "1":#										choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/instagram tools/instagram")#	installation de instapump
 				os.system("git clone https://github.com/thelinuxproject/paypal tools/paypal")#	installation de paypal
 				os.system("clear")
-				println(7)
-				print("operation terminer...")
-				conte_a_rebour(4)#												attente de 4 seconde	
-			elif userChoise_tools == "2":#										choix n°1 pour istaller les outils de phishing
+				conte_a_rebour(3, "téléchargement en cour...","operation terminer")#attente de 4 seconde	
+			elif user_choise_tools == "2":#										choix n°1 pour istaller les outils de phishing
 				os.system("mkdir tools")
 				os.system("git clone https://github.com/thelinuxproject/saycheesapp tools/saycheesapp")#	installation de saycheesapp 
 				os.system("clear")
-				println(7)
-				print("operation terminer...")
-				conte_a_rebour(4)#												attente de 4 seconde	
-			elif userChoise_tools == "4":#										choix n°4 pour quitter le choi de téléchargement des des depots
-				userChoise = "0"#												retour au menu userchoice
+				conte_a_rebour(3, "téléchargement en cour...","operation terminer")#attente de 4 seconde	
+			elif user_choise_tools == "4":#										choix n°4 pour quitter le choi de téléchargement des des depots
+				user_choise = "0"#												retour au menu user_choise
+			else :
+				conte_a_rebour(5, printError)
+		
+		elif user_choice == "2":
+			os.system("clear")
+			print("[*]Option & Réglage :\n\n[1]Clavier azerty (sur Linux)\n[2]\n[3] \n[4]sortie")
+			user_option = input("{}>".format(username))
+			user_option = str(user_option)#										cast de la variable user_option
+			if user_option == "1":
+				os.system("setxkbmap fr")
+				os.system("clear")
+				conte_a_rebour(3, "changement en cour...","operation terminer")
 			else :
 				conte_a_rebour(5, printError)
 
-		elif userChoise == "2":
+		elif user_choise == "3":
 			os.system("clear")
 			print("[*]Aide pour :\n\n[1]phishing\n[2]saycheesapp \n[3] \n[4]sortie")
 			user_choise_help = input("{}>".format(username))
-			user_choise_help = str(user_choise_help)#								cast de la variable userChoise_ph
+			user_choise_help = str(user_choise_help)#							cast de la variable user_chice_help
 			
 			if user_choise_help == "1":
 				os.system("clear")
 				print("[*]Aide pour :\n\n[1]instagram\n[2]paypal \n[3] \n[4]sortie")
-				user_choise_ph = input("{}>".format(username))
-				user_choise_ph = str(user_choise_ph)
-
-				if user_choise_ph == "1":
+				user_choise_help_ph = input("{}>".format(username))
+				user_choise_help_ph = str(user_choise_help_ph)
+				
+				if user_choise_help_ph == "1":
 					os.system("clear")
-					conte_a_rebour(10, "\nCommandes pour créer un lien de phisning instagram sont les suivante :\n\n\n	•cd tools/instagram\n\n	•bash instagram.sh")
+					conte_a_rebour(10, "\nCommandes pour créer un lien de phisning instagram sont les suivantes :\n\n\n	•cd tools/instagram\n\n	•bash instagram.sh", "au revoir :)")
 
-				elif user_choise_ph == "1":
+				elif user_choise_help_ph == "1":
 					os.system("clear")
-					conte_a_rebour(10, "\nCommandes pour créer un lien de phisning paypal sont les suivante :\n\n\n	•cd tools/paypal\n\n	•bash paypal.sh")
+					conte_a_rebour(10, "\nCommandes pour créer un lien de phisning paypal sont les suivantes :\n\n\n	•cd tools/paypal\n\n	•bash paypal.sh", "au revoir :)")
 
 				else :
 					conte_a_rebour(5, printError)
 
 			elif user_choise_help == "2":
 				os.system("clear")
-				conte_a_rebour(10, "\nCommandes pour créer un lien de phisning paypal sont les suivante :\n\n\n	•cd tools/saycheesapp\n\n	•bash saycheesapp.sh")
+				conte_a_rebour(10, "\nCommandes pour créer un lien de phisning instagram evc un controle sur la webcam sont les suivantes :\n\n\n	•cd tools/saycheesapp\n\n	•bash saycheesapp.sh", "au revoir :)")
 
 			elif user_choise_help == "4":#										choix n°4 pour quitter le chois de l'outis
-				userChoise = "0"#												retour au menu userchoice
+				user_choise = "0"#												retour au menu user_choise
 			
 			else :
 				conte_a_rebour(5, printError)
 
-		elif userChoise == "3":
+		elif user_choise == "4":
 			username = "--"#													retour au menu changer de nom
-		elif userChoise == "4":
-			on_off = 0#															sorti de hacktools
+		elif user_choise == "5":
+			on_off = 0#															sortir de hacktools
 		else :
 			conte_a_rebour(5, printError)
