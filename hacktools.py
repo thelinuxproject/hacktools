@@ -42,7 +42,7 @@ def conte_a_rebour(nombre, text="", msgfinal=""):
 		sleep(1)
 		nombre-=1
 		os.system("clear")
-	print("msgfinal")
+	print(msgfinal)
 	sleep(1)
 #------------------------------------#
 
